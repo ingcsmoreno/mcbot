@@ -10,6 +10,6 @@ ADD https://github.com/MrKinau/FishingBot/releases/download/${BOT_VER}/FishingBo
 
 RUN chown 1001:1001 mcbot.jar
 
-USER 1001
+#USER 1001
 
 CMD ["java", "-jar", "mcbot.jar", "-nogui", "-config", "/home/mcbot/config/config.json"]
