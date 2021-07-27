@@ -1,10 +1,9 @@
 FROM openjdk:8u131-jre-alpine
-WORKDIR /usr/src/app
 
-ENV MC_BOT_HOST="localhost"
-ENV MC_BOT_PORT="25565"
-ENV MC_BOT_USERNAME="anonymous"
-ENV MC_BOT_PASSWORD=""
+RUN mkdir -p /usr/src/app \
+ && chown 1001:1001 /usr/src/app
+
+WORKDIR /usr/src/app
 
 ENV BOT_VER=2.7.17
 

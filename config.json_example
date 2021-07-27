@@ -1,0 +1,140 @@
+{
+    "announces": {
+        "announce-lvl-up-text": "I am level %lvl% now",
+        "announce-lvl-up": true,
+        "discord": {
+            "alert-on-level-update": true,
+            "alert-on-respawn": true,
+            "alert-on-attack": true,
+            "ping-on-enchantment": {
+                "enchantments": [
+                    "MENDING",
+                    "UNBREAKING"
+                ],
+                "items": ["enchanted_book"],
+                "enabled": false,
+                "mention": "<@USER_ID>"
+            },
+            "announce-type-discord": "ONLY_ENCHANTED",
+            "web-hook": "YOURWEBHOOK",
+            "enabled": false
+        },
+        "announce-type-console": "ALL",
+        "announce-type-chat": "ONLY_ENCHANTED"
+    },
+    "server": {
+        "spoof-forge": false,
+        "default-protocol": "AUTOMATIC",
+        "port": 25588,
+        "ip": "127.0.0.1",
+        "realm-accept-tos": false,
+        "online-mode": false,
+        "realm-id": -1
+    },
+    "auto": {
+        "timer": {
+            "timers": [{
+                "name": "test",
+                "units": 5,
+                "commands": ["Every five minutes"],
+                "timeUnit": "MINUTES"
+            }],
+            "enabled": false
+        },
+        "auto-eject": {
+            "rules": [
+                {
+                    "name": "fish",
+                    "ejectionType": "DROP",
+                    "direction": "WEST",
+                    "allowList": [
+                        "cod",
+                        "salmon",
+                        "pufferfish",
+                        "tropical_fish"
+                    ]
+                },
+                {
+                    "name": "treasure",
+                    "ejectionType": "DROP",
+                    "direction": "EAST",
+                    "allowList": [
+                        "bow",
+                        "enchanted_book",
+                        "name_tag",
+                        "nautilus_shell",
+                        "saddle"
+                    ]
+                },
+                {
+                    "name": "junk",
+                    "ejectionType": "DROP",
+                    "direction": "SOUTH",
+                    "allowList": [
+                        "lily_pad",
+                        "bowl",
+                        "leather",
+                        "leather_boots",
+                        "rotten_flesh",
+                        "stick",
+                        "string",
+                        "potion",
+                        "bone",
+                        "ink_sac",
+                        "tripwire_hook"
+                    ]
+                }
+            ],
+            "enabled": false
+        },
+        "auto-command-on-respawn": {
+            "delay": 1000,
+            "commands": [
+                "%prefix%I respawned",
+                "/home fishing"
+            ],
+            "enabled": false
+        },
+        "auto-reconnect": true,
+        "auto-disconnect-players-threshold": 5,
+        "auto-quit-before-death": {
+            "enabled": false,
+            "min-health-before-quit": 6
+        },
+        "auto-disconnect": false,
+        "auto-command-before-death": {
+            "min-health-before-death": 6,
+            "enabled": false,
+            "commands": [
+                "%prefix%I am about to die",
+                "/home"
+            ]
+        },
+        "auto-reconnect-time": 5,
+        "auto-sneak": false
+    },
+    "start-text": {
+        "text": [
+            "Soy un Bot. Ignorenme."
+        ],
+        "enabled": true
+    },
+    "logs": {
+        "log-count": 15,
+        "log-packets": false
+    },
+    "account": {
+        "auth-service": "MOJANG",
+        "password": "",
+        "mail": "Fallencito"
+    },
+    "misc": {
+        "look-speed": 32,
+        "prevent-rod-breaking": true,
+        "stucking-fix-enabled": true,
+        "wiki": "https://github.com/MrKinau/FishingBot/wiki/config",
+        "language": "ENGLISH",
+        "gui-console-max-lines": 1000,
+        "disable-rod-checking": false
+    }
+}
