@@ -10,4 +10,6 @@ ENV BOT_VER=1.0.11
 
 ADD https://github.com/alwyn974/MinecraftBOT/releases/download/v${BOT_VER}/MinecraftBOT-${BOT_VER}-all.jar mcbot.jar
 
+RUN chown 1001:1001 mcbot.jar
+
 CMD ["java", "-jar", "mcbot.jar"]
