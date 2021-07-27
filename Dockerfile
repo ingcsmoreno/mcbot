@@ -12,4 +12,4 @@ RUN chown 1001:1001 mcbot.jar
 
 USER 1001
 
-CMD ["java", "-jar", "mcbot.jar", "-nogui"]
+CMD ["java", "-jar", "mcbot.jar", "-nogui", "-config". "/home/mcbot/config/config.json"]
