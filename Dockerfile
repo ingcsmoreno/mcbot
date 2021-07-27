@@ -1,9 +1,8 @@
 FROM openjdk:8u131-jre-alpine
 
-RUN mkdir -p /usr/src/app \
- && chown 1001:1001 -R /usr/src/app
+RUN adduser -D -u 1001 -g "mcbot" mcbot
 
-WORKDIR /usr/src/app
+WORKDIR /home/mcbot
 
 ENV BOT_VER=2.7.17
 
