@@ -1,15 +1,13 @@
-FROM node:15.5-alpine3.10
+FROM openjdk:8u131-jre-alpine
+WORKDIR /usr/src/app
 
-COPY node /src/
+ENV MC_BOT_HOST="localhost"
+ENV MC_BOT_PORT="25565"
+ENV MC_BOT_USERNAME="anonymous"
+ENV MC_BOT_PASSWORD=""
 
-WORKDIR /src
+ENV BOT_VER=1.0.11
 
-RUN npm install
+ADD https://github.com/alwyn974/MinecraftBOT/releases/download/v${BOT_VER}/MinecraftBOT-${BOT_VER}-all.jar mcbot.jar
 
-ENV MC_HOST mc.example.com
-ENV MC_PORT 25565
-ENV MC_USER bot_account
-ENV MC_LOOK_NEAR true
-ENV MC_SAY_HI false
-
-CMD [ "npm","start" ]
+CMD ["java", "-jar", "mcbot.jar"]
